@@ -1,0 +1,5 @@
+Scripts/my-openrc.sh
+Scripts/ContainerBuilderKey
+build/*
+.venv/*
+*.swp

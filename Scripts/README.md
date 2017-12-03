@@ -8,14 +8,8 @@ Servers may be spun up anywhere on the ORNL network and also the Titan login nod
 * Login to `cloud.cades.ornl.gov`
 * Navigate to `Compute -> Access & Security -> API Access`
 * Click `Download OpenStack RC File v3`
-* Rename downloaded file as openrc.sh and move it to `ContainerBuilder/Scripts`
+* Rename downloaded file as my-openrc.sh and move it to `ContainerBuilder/Scripts`
 * Modify `openrc.sh` to hardcode `$OS_PASSWORD_INPUT` and remove the interactive prompt
-* Add the following to the bottom of `openrc.sh`
-```
-export OS_PROJECT_DOMAIN_NAME=$OS_USER_DOMAIN_NAME
-export OS_IDENTITY_API_VERSION="3"
-export OS_CACERT=$(pwd)/OpenStack.cer
-```
 
 To initiate the Containerbuilder service several steps are required
 * Bring up the BuilderQueue OpenStack instance
