@@ -1,4 +1,4 @@
 build/*
-.venv/*
+*/.venv/*
 Scripts/openrc.sh
 Scripts/ContainerBuilderKey

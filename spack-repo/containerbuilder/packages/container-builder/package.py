@@ -8,4 +8,4 @@ class ContainerBuilder(CMakePackage):
 
     version('0.0.0')
 
-    depends_on('boost@1.65.1')
+    depends_on('boost@1.65.1+coroutine')

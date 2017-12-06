@@ -1,9 +1,12 @@
 #!/bin/bash -ex
-SPACKROOT=tests/artifacts/.spack
+ARTIFACTS=tests/artifacts/build_with_spack
+mkdir -p $ARTIFACTS
+export HOME=$ARTIFACTS
+rm -rf $HOME/.spack
 
-if [ ! -d $SPACKROOT ]; then
-	git clone https://github.com/spack/spack.git $SPACKROOT
+if [ ! -d $HOME/spack ]; then
+	git clone https://github.com/spack/spack.git $HOME/spack
 fi
 
-$SPACKROOT/bin/spack repo add spack-repo/containerbuilder
-$SPACKROOT/bin/spack install container-builder
+$HOME/spack/bin/spack repo add spack-repo/containerbuilder
+$HOME/spack/bin/spack install --no-checksum container-builder
